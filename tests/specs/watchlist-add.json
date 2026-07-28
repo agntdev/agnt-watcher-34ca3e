@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Add new coin to watchlist with confirmation for unknown tickers"
+              "text": "Send a ticker such as BTC, ETH, or SOL."
             }
           }
         ],

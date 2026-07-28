@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Configure price threshold or percentage move alert"
+              "text": "Add a coin before creating an alert."
             }
           }
         ],

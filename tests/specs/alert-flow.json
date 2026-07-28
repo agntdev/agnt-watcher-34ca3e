@@ -1,0 +1,16 @@
+[
+  {
+    "name": "unknown ticker gives suggestions",
+    "steps": [
+      { "send": { "callback": "watchlist:add" }, "expect": [{ "method": "sendMessage", "payload": { "text": "Send a ticker such as BTC, ETH, or SOL." } }] },
+      { "send": { "text": "NOPE" }, "expect": [{ "method": "sendMessage", "payload": { "text": "I couldn't verify that ticker. Try BTC, ETH, SOL, XRP, ADA, DOGE, AVAX, DOT, LINK, or MATIC." } }] }
+    ]
+  },
+  {
+    "name": "summary preference opens main menu",
+    "steps": [
+      { "send": { "text": "/start" }, "expect": [{ "method": "sendMessage" }] },
+      { "send": { "callback": "setup:summary:on" }, "expect": [{ "method": "editMessageText", "payload": { "text": "Morning summaries are enabled for 08:15 UTC." } }] }
+    ]
+  }
+]

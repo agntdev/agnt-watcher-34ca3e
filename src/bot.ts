@@ -6,7 +6,13 @@ import type { StorageAdapter } from "grammy";
 // bot grows. Durable domain data must NOT live here — use the toolkit's
 // persistent storage (see AGENTS.md).
 export interface Session {
-  // example: step?: "awaiting_amount";
+  flow?: {
+    kind: "add_coin" | "alert_value" | "quiet" | "timezone";
+    alertTicker?: string;
+    alertType?: "threshold" | "percent";
+  };
+  /** Persistent per-user CryptoWatch records. The toolkit serializes this in Redis/DO storage. */
+  records?: import("./crypto.js").UserRecords;
 }
 
 export type Ctx = BotContext<Session>;

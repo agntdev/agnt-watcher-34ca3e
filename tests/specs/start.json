@@ -1,13 +1,13 @@
 [
   {
-    "name": "/start replies with the welcome + main menu",
+    "name": "/start begins onboarding with quiet-hour defaults",
     "steps": [
       {
         "send": { "text": "/start" },
         "expect": [
           {
             "method": "sendMessage",
-            "payload": { "text": "👋 Welcome! Tap a button below to get started." }
+            "payload": { "text": "Your quiet hours are set to 00:00–08:00 UTC. Choose whether to receive a morning summary." }
           }
         ]
       }

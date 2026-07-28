@@ -1,13 +1,13 @@
 [
   {
-    "name": "/price",
+    "name": "/price gives a useful empty watchlist state",
     "steps": [
       {
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Check current price of specific coin or full watchlist"
+              "text": "No coins yet — tap Add coin to build your watchlist."
             }
           }
         ],
